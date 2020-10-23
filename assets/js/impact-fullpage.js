@@ -9,13 +9,25 @@ new fullpage('#fullpage', {
 
 // Jquery Counter-Up from Codepen
 
-document.getElementById("something").onscroll = function() {counterUp()};
+let something = document.getElementById("something");
 
-function counterUp() {
+something.addEventListener("scroll", (e) => {
   console.log("test");
-  delay: 10;
-  time: 2000;
-}
+  e.counterUp({
+    delay: 10,
+    time: 2000
+  })
+});
+
+// function counterUp() {
+//   console.log("test");
+//   delay: 10;
+//   time: 2000;
+// }
+
+
+$('.counter').addClass('animated fadeInDownBig');
+$('h3').addClass('animated fadeIn');
 
 // $('.counter').counterUp({
 //   delay: 10,
@@ -50,8 +62,6 @@ $(".section").scroll() {
 //     });
 // }
 
-$('.counter').addClass('animated fadeInDownBig');
-$('h3').addClass('animated fadeIn');
 
 
 
